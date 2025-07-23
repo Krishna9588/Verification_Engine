@@ -3,27 +3,6 @@ import json
 import random
 import random
 
-# from bin.main_t2 import company_name
-
-# Gemini API Key -------------------------------------------
-# gemini_api_key = "AIzaSyCR1CPs95RtzLJI6GDua9L-P7lw23MV8qo" # 7 July
-# gemini_api_key = "AIzaSyClIv2jJ8EakJxqVsIpVZPlkMy10VX9TrM" # 7 July
-# gemini_api_key = "AIzaSyDMsjJNOYLPzwyTb4vazwKeYv92LYcDVo4" # 7 July
-# gemini_api_key = "AIzaSyAGAOFtv1n-1jaivOC3Os0MoZVm0SjC2oQ" # v's API
-# gemini_api_key = "AIzaSyC07kZfxEtq3ucbTnSoHkPN4tgR77WYqj0"
-# gemini_api_key = "AIzaSyB6EmZVg0V0-0OQCuCajKk-lZsSxR3xFz8"
-# gemini_api_key = "AIzaSyCd8WMXsVmhZDuB4EgpRb85HgIpeVKcKJ0"
-# AIzaSyC07kZfxEtq3ucbTnSoHkPN4tgR77WYqj0
-# AIzaSyB6EmZVg0V0-0OQCuCajKk-lZsSxR3xFz8
-# AIzaSyCd8WMXsVmhZDuB4EgpRb85HgIpeVKcKJ0
-# AIzaSyCifw8wPWgYeCerWc3wmWv9PNpeAgGlVwc
-
-# Gemini Model ----------------------------------------------
-# genai.configure(api_key=gemini_api_key)
-
-# model = genai.GenerativeModel('gemini-1.5-flash')
-# model = genai.GenerativeModel('gemini-2.0-flash-lite')
-
 # -----------------------------------------------------------
 
 API_KEYS = [ "AIzaSyB6EmZVg0V0-0OQCuCajKk-lZsSxR3xFz8",
@@ -31,46 +10,7 @@ API_KEYS = [ "AIzaSyB6EmZVg0V0-0OQCuCajKk-lZsSxR3xFz8",
              "AIzaSyBIKfbK6EhSqx4FxZkWDHOXmzSZBwSV5hY",
              "AIzaSyAnoBK9VLxOKfFqAFJpUT9Wpqyq4VZSjsw",
              "AIzaSyAiPbkL94Q4u6RawKPopg94-zhtEEBlopA",
-             # "AIzaSyDNhTxdw3o64wxVfsTXuQ6yAiZ8kH1N0V0",
              ]
-
-# "AIzaSyA4N1sE7jb8y60F8YLZybW6Kn4IBaXiHQk",
-# "AIzaSyAGAOFtv1n-1jaivOC3Os0MoZVm0SjC2oQ",
-# "AIzaSyCfkTpETUo-HTBI761MU0RKz4EjfghShy0",
-# "AIzaSyBLvepDj4j1NhtrN-X17SNyXsAlF8TNHho"
-# "AIzaSyArR2Yk4KlzffWBbyWWUqa2-Zt-x-idAPE",
-# "AIzaSyDe7fUxhlkRMgGHsEBdlDlZ9xv1OkE6wDk
-# "AIzaSyAKTkJhizTlUJHWG66ZZG1Ro_OkhB4Oss4",
-# "AIzaSyAZhsvW2cipvK9ljnkqi9Lp5rCs5fTP_hk"
-# "AIzaSyDmWJ0LxchFhMPWBy13WxvaxYfpWM5Wgs4"
-
-# Swapnil's API - NEW
-# API_KEYS = ["AIzaSyCd8WMXsVmhZDuB4EgpRb85HgIpeVKcKJ0",
-#             "AIzaSyChd4r5WBd2pesSG8CjROmbwUFBKZUUN2Q",
-#             "AIzaSyB3sYWowbpnFO5fnC0TnJE-hxxlcMmvwIs",
-#             "AIzaSyCgXDFPLkH9geHJb13WrbbstKd5G3iYZc0",
-#             "AIzaSyBLvepDj4j1NhtrN-X17SNyXsAlF8TNHho",
-#
-#             ]
-#
-# API_KEYS = ["AIzaSyA54gVWak6769uS56nJKGdAXVK4ZP3Ejeo",
-#             "AIzaSyChd4r5WBd2pesSG8CjROmbwUFBKZUUN2Q",
-#             "AIzaSyCgXDFPLkH9geHJb13WrbbstKd5G3iYZc0",
-#             "AIzaSyBLvepDj4j1NhtrN-X17SNyXsAlF8TNHho"
-#             ]
-
-# API_KEYS = ["AIzaSyB8xmrgn87XTBr1_rxim0huAubOBDBvtD4",
-#             "AIzaSyCd8WMXsVmhZDuB4EgpRb85HgIpeVKcKJ0",
-            # "AIzaSyCgXDFPLkH9geHJb13WrbbstKd5G3iYZc0"]
-# "AIzaSyAm90vZ6HpwLzYY2wE8eF8MzDZY39lGb-U",
-# "AIzaSyB8xmrgn87XTBr1_rxim0huAubOBDBvtD4",
-# "AIzaSyA4N1sE7jb8y60F8YLZybW6Kn4IBaXiHQk",
-# "AIzaSyBBW8ChVMySP_6_tAsmun5NM4P_kLf0ba8",
-# API_KEYS = ["AIzaSyA3gifC8aqcaRmFPUjeqSZSmQBMp8ianm8",
-#             "AIzaSyChd4r5WBd2pesSG8CjROmbwUFBKZUUN2Q",
-#             "AIzaSyAmt0s_mOrgyccBOSb9w12Jm32rZoCTFF4"
-#             ]
-
 
 target = [
     "use", "using", "used", "adopted", "deployed", "running on",

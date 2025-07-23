@@ -1,0 +1,92 @@
+[
+    {
+        "Company Name": "Birlasoft",
+        "Domain": "http://www.birlasoft.com/",
+        "Page URL": "https://www.birlasoft.com/services/enterprise-products/aws",
+        "Keyword": "AWS",
+        "Date": "05/2025",
+        "Usage Indicated": "Yes",
+        "Explanation": "The text states 'Birlasoft is an Advanced Consulting Partner with AWS' and 'We help your enterprise build on these foundations with cloud native development AWS data migration services analytics and cloud management services', which meets the 'Direct Company Statements' and 'General Indicators' positive indicator for partnership and implementation.",
+        "Processing Time (s)": 8.08
+    },
+    {
+        "Company Name": "Bluescope Singapore",
+        "Domain": "https://www.bluescope.com/our-company/where-we-are/locations",
+        "Page URL": "https://www.bluescope.com/content/dam/bluescope/corporate/bluescope-com/sustainability/documents/2022_BlueScope_Report_Sustainability_Report.pdf",
+        "Keyword": "Glue",
+        "Date": "09/2022",
+        "Usage Indicated": "No",
+        "Explanation": "The text mentions 'VOC glue' in relation to building materials, which fails the 'CRITICAL - Context Mismatch' rule because the context refers to a physical substance, not the technology concept of 'Glue'.",
+        "Processing Time (s)": 11.14
+    },
+    {
+        "Company Name": "Bristol Myers Squibb (APAC)",
+        "Domain": "http://www.bms.com/",
+        "Page URL": "https://www.bms.com/es/archive/job-search-results/job-details.html?requisitionId=R1592033",
+        "Keyword": "RDS",
+        "Date": "10/2017",
+        "Usage Indicated": "Yes",
+        "Explanation": "The text lists 'RDS' under 'Hands on experience in Python AWS services Redshift S3 RDS Athena Native AWS Services'. This meets the 'General Indicators' positive indicator because it describes specific technical experience required in a job posting for an internal role.",
+        "Processing Time (s)": 2.22
+    },
+    {
+        "Company Name": "British American Tobacco Indonesia",
+        "Domain": "https://bat.com/id",
+        "Page URL": "https://www.bat.com/sustainability-and-esg/nature",
+        "Keyword": "AWS",
+        "Date": "07/2025",
+        "Usage Indicated": "No",
+        "Explanation": "The text refers to 'AWS certification process' and 'AWS Standard certification', where 'AWS' refers to the 'Alliance for Water Stewardship', not the technology provider Amazon Web Services, thus failing the 'CRITICAL - Context Mismatch' rule.",
+        "Processing Time (s)": 4.32
+    },
+    {
+        "Company Name": "bytebridge",
+        "Domain": "http://www.bytebt.com/",
+        "Page URL": "https://www.bytebt.com/the-realities-of-ai-what-it-is-and-isnt-in-cybersecurity/",
+        "Keyword": "AWS",
+        "Date": "04/2025",
+        "Usage Indicated": "No",
+        "Explanation": "The text mentions that Sandesh Reddy, a Solutions Architect at ByteBridge, holds an 'AWS' certification. This does not constitute operational use and fails the 'No Direct Action by Company' rule.",
+        "Processing Time (s)": 5.53
+    },
+    {
+        "Company Name": "Capcom Korea",
+        "Domain": "https://www.capcom-games.com/en-asia/",
+        "Page URL": "https://www.capcom-games.com/cgc/2025/ja-jp/network/",
+        "Keyword": "AWS",
+        "Date": "Not found",
+        "Usage Indicated": "No",
+        "Explanation": "The text includes 'AWS Global Accelerator Speed Comparison' and a URL including 'aws' but the context appears to be a speed test or performance comparison related to a competition, not direct operational use of AWS by Capcom Korea. This fails the 'No Direct Action by Company' rule.",
+        "Processing Time (s)": 2.04
+    },
+    {
+        "Company Name": "Capcom Korea",
+        "Domain": "https://www.capcom-games.com/en-asia/",
+        "Page URL": "https://capsuletech.com/clinical-insights-manager",
+        "Keyword": "S3",
+        "Date": "03/2025",
+        "Usage Indicated": "No",
+        "Explanation": "The text mentions 'AWS S3', which is a technology. However, the context is 'a facility owned and managed cloud storage account such as Google Cloud Storage AWS S3 or Azure Blob storage', describing a third-party cloud storage option. This falls under the 'No Direct Action by Company' exclusion rule.",
+        "Processing Time (s)": 4.28
+    },
+    {
+        "Company Name": "CBN Media",
+        "Domain": "http://www.cbn.com/",
+        "Page URL": "https://courses.cbn.com/pages/cbn-third-party-processor-information",
+        "Keyword": "Shield",
+        "Date": "05/2025",
+        "Usage Indicated": "Yes",
+        "Explanation": "The text states, 'These services have an EU US Privacy Shield certification.' which meets the 'General Indicators' positive indicator because it uses a keyword related to implementation and certification.",
+        "Processing Time (s)": 5.13
+    },
+    {
+        "Company Name": "CBN Media",
+        "Domain": "http://www.cbn.com/",
+        "Page URL": "https://www.centurylink.com/aws",
+        "Keyword": "AWS cloud",
+        "Date": "07/2025",
+        "Usage Indicated": "No",
+        "Explanation": "The text primarily describes Lumen's services related to AWS, including connectivity solutions, certifications, and resources like webinars. CBN Media is not directly mentioned as utilizing AWS. Therefore, the 'No Direct Action by Company' exclusion rule is applied as the text does not provide evidence of CBN Media's operational use.",
+        "Processing Time (s)": 5.93
+    }
+]

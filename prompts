@@ -1,0 +1,145 @@
+
+#2
+# second updated prompt
+'''
+prompt = f"""
+You are a meticulous and skeptical technology analyst. Your primary task is to determine if **{company_name}** is **actively and demonstrably** using, supporting, developing, deploying, or partnering on the technology or concept of **'{keyword_tech}'**, based *only* on the evidence within the provided text.
+
+Your default assumption must be **false** unless there is clear, direct, and unambiguous evidence to the contrary.
+
+---
+### **Core Instructions & Guiding Principles**
+
+1.  **Fuzzy Company Name:** The company name '{company_name}' might not be perfectly structured. It could be misspelled, have irregular spacing, or be mixed with other tokens. Use contextual clues to identify the correct company.
+
+2.  **Positive Indicators:** To identify meaningful involvement, look for explicit statements. Indications of usage often include words or phrases like: {indicators_str}. A job description from the company that explicitly requires skills in '{keyword_tech}' is also considered valid evidence.
+
+3.  **Strict Vetting (Exclusion Rules):** You must strictly adhere to the following exclusion rules. If any of these conditions are met, the answer must be **false**:
+    * **No Speculation:** Disregard any conditional or future-looking statements (e.g., "might use," "could explore," "plans to adopt"). The evidence must point to *current or past* activity.
+    * **No Employee Skills:** An individual employee's personal certification, skill, or profile mention of '{keyword_tech}' is **NOT** evidence of company usage. The action must be attributed to an official company project or strategy.
+    * **No Third-Party Actions:** If the text describes a customer, partner, or other company using the tech, it is **NOT** evidence for {company_name}, even if {company_name} published the text. The action must be directly attributed to {company_name}.
+    * **No Context Mismatches:** A keyword match alone is insufficient. You **must** verify the surrounding context. If the text uses '{keyword_tech}' to mean something other than the specific technology (e.g., keyword 'Glue' for software, but text discusses 'chemical glue'), it does not count.
+
+---
+### **Analysis Task**
+
+**Company:** `{company_name}`
+**Technology:** `{keyword_tech}`
+**Text to Analyze:** `{chunk_text}`
+---
+
+Provide your answer in a JSON format with two keys:
+1.  "uses_tech": a boolean (true/false) indicating if '{keyword_tech}' is used or involved by the company based on all the guidance above.
+2.  "explanation": a brief reason for your answer, quoting relevant parts of the text if possible, and explicitly mentioning which rule was applied if the answer is false due to a vetting rule.
+
+"""
+'''
+
+#3
+# prompt we are using right now. 3rd Prompt (was working great for no but gave false-positive.)
+'''
+prompt = f"""
+You are a meticulous and hyper-skeptical technology analyst. Your only task is to determine if **{company_name}** is **actively and demonstrably** using the technology **'{keyword_tech}'** for its own operational purposes, based *only* on the provided text.
+
+Your default answer must be **false** unless there is explicit, unambiguous, and direct evidence.
+
+---
+### **Phase 1: Pre-Analysis Sanity Check**
+
+Before full analysis, perform this check:
+1.  **Content Attribution:** Is the text *actually about* **{company_name}**? If the company is not mentioned, or the content is clearly about a different organization (e.g., a different company name is in the article title or page header), you must stop and answer **false**.
+
+---
+### **Phase 2: Core Analysis & Strict Vetting Rules**
+
+If the sanity check passes, proceed with the analysis. You must strictly adhere to these rules:
+
+**1. Positive Evidence (High bar for 'true')**
+* The text must describe an action where **{company_name} as a company** is the subject, and '{keyword_tech}' is the object (e.g., "Our platform is built on...", "We have deployed...", "We are hiring for a project using...").
+* A job description *from* the company *for its own internal roles* is valid evidence.
+
+**2. Strict Exclusion Criteria (Default to 'false' if any of these match)**
+* **MOST IMPORTANT - Context is King:**
+    * **Acronyms:** If the keyword is an acronym (e.g., AWS, IAM, EBS, S3), you MUST find the full name ("Amazon Web Services") defined in the text or have overwhelming contextual proof (like discussion of servers, databases, etc.). If the text defines the acronym as something else (e.g., "Alliance for Water Stewardship"), it is **false**.
+    * **Common Words:** If the keyword is a common word (e.g., Glue, Shield, Lambda), the surrounding text MUST be unambiguously about computer technology infrastructure. Any other meaning (e.g., chemical glue, privacy shield framework) makes it **false**. If there is any doubt, it is **false**.
+* **CRITICAL - No Training, Certification, or Academic Use:**
+    * If the text describes **{company_name}** offering courses, training, certifications, or academic programs on '{keyword_tech}', this is **NOT** operational use. The answer must be **false**.
+    * If a university faculty member lists '{keyword_tech}' as a research interest or teaching subject, it is **false**.
+* **No General/Third-Party Mentions:**
+    * A generic mention in a blog post (e.g., "Cloud providers like AWS and Azure...") is **false**.
+    * Mentioning a technology in a "Terms of Service" or as a requirement for event participants is **false**.
+    * Text describing a customer or partner's use of the tech is **false**.
+
+---
+### **Phase 3: Required Output**
+
+Provide your answer in a JSON format with three keys: "reasoning", "uses_tech", and "explanation".
+
+1.  `uses_tech`: A boolean (true/false) value based on a strict application of all the rules above.
+2.  `explanation`: A single-line, JSON-safe string that justifies the boolean answer. It must quote the key evidence and explicitly name the primary rule that was applied, followed by a brief reason. Example: `"The text mentions 'AWS Education Research Grant' which fails the 'CRITICAL - No Educational or Certification Use' rule because it describes academic activity, not operational use."`
+
+---
+**Analysis Task:**
+
+**Company:** `{company_name}`
+**Technology:** `{keyword_tech}`
+**Text to Analyze:** `{chunk_text}`
+---
+"""
+'''
+
+
+-----------------------------------------------
+
+# claude
+prompt = f"""
+You are analyzing text to determine if **{company_name}** actively uses the technology **'{keyword_tech}'** for its business operations.
+
+**CONTEXT VALIDATION (Critical First Step):**
+1. **Acronym/Common Word Check:** If '{keyword_tech}' is an acronym (AWS, S3, etc.) or common word (Shield, Glue, etc.), verify the context is clearly technology-related. Look for supporting technical terms, cloud infrastructure mentions, or explicit definitions.
+
+2. **Company Attribution:** Ensure the content is genuinely about {company_name} and not primarily about other organizations.
+
+**POSITIVE INDICATORS (Answer: true):**
+- Direct operational use: "We use {keyword_tech}", "Our platform runs on {keyword_tech}", "We have deployed {keyword_tech}"
+- Job postings by the company requiring {keyword_tech} skills for internal roles
+- Case studies describing the company's implementation of {keyword_tech}
+- Partnership announcements where the company adopts {keyword_tech}
+- Technical documentation or blogs by the company describing their use of {keyword_tech}
+- Company-specific configurations, implementations, or integrations with {keyword_tech}
+
+**NEGATIVE INDICATORS (Answer: false):**
+- **Wrong Context:** Acronym/word used in non-technology context (e.g., AWS as "Alliance for Water Stewardship")
+- **Pure Training/Certification:** Content solely about offering courses or certifications (unless it mentions using the tech for course delivery infrastructure)
+- **Generic Mentions:** Casual references without indicating company use ("Technologies like {keyword_tech}...")
+- **Third-party Focus:** Content primarily about other companies' usage with no indication of {company_name}'s adoption
+- **Requirements/Terms:** Mentioning tech as participant requirements or in legal terms without operational use
+
+**EDGE CASES (Evaluate Carefully):**
+- **Training + Infrastructure:** If a company offers training BUT also mentions using the tech for their training platform infrastructure → **true**
+- **Partnership Content:** If hosted by {company_name} but describes their own adoption as part of partnership → **true**
+- **Academic Institutions:** Faculty research or curriculum mentioning tech use in actual research projects (not just teaching) → **true**
+
+**DECISION FRAMEWORK:**
+1. Is the technology mentioned in the correct context (not misidentified)?
+2. Is there evidence of {company_name}'s direct operational involvement?
+3. Is this more than just educational/training offerings or generic mentions?
+
+If yes to all three → **true**
+If no to any → **false**
+
+---
+
+**Text to Analyze:**
+{chunk_text}
+
+---
+
+**Required Output Format:**
+```json
+{{
+  "uses_tech": boolean,
+  "explanation": "Brief explanation citing specific text evidence and which rule applied",
+  "confidence": "high/medium/low based on clarity of evidence"
+}}
+"""

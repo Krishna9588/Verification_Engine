@@ -7,7 +7,7 @@ from typing import Dict
 from openai import OpenAI, RateLimitError
 
 # -------------------- CONFIG --------------------
-API_KEY     = "sk-A8C8nKRVL2TC6p3qj0T10ne0Y5kUXnffdr8RAwTvbqzpd6R7"
+API_KEY     = ""
 BASE_URL   = "https://api.moonshot.ai/v1"   # clean, no HTML, no trailing space
 # KIMI_MODEL = "kimi-1.5-flash"
 KIMI_MODEL = "kimi-k2-0711-preview"

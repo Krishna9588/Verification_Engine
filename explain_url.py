@@ -4,10 +4,10 @@ import json
 from itertools import cycle
 
 # Gemini API KEYs ----------------------------------------------
-API_KEYS = ["AIzaSyCn7YEam6Vw5ToVQTJ6mRZogMwM3GwZAHU",
-            "AIzaSyB8xmrgn87XTBr1_rxim0huAubOBDBvtD4",
-            "AIzaSyB3sYWowbpnFO5fnC0TnJE-hxxlcMmvwIs",
-            "AIzaSyCgXDFPLkH9geHJb13WrbbstKd5G3iYZc0"
+
+API_KEYS = ["",
+            "",
+            ""
             ]
 
 # -----------------------------------------------------------

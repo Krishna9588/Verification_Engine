@@ -5,12 +5,10 @@ import random
 
 # -----------------------------------------------------------
 
-API_KEYS = [ "AIzaSyB6EmZVg0V0-0OQCuCajKk-lZsSxR3xFz8",
-             "AIzaSyCd8WMXsVmhZDuB4EgpRb85HgIpeVKcKJ0",
-             "AIzaSyBIKfbK6EhSqx4FxZkWDHOXmzSZBwSV5hY",
-             "AIzaSyAnoBK9VLxOKfFqAFJpUT9Wpqyq4VZSjsw",
-             "AIzaSyAiPbkL94Q4u6RawKPopg94-zhtEEBlopA",
-             ]
+API_KEYS = ["",
+            "",
+            ""
+            ]
 
 target = [
     "use", "using", "used", "adopted", "deployed", "running on",

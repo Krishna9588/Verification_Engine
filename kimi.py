@@ -3,7 +3,7 @@ import json
 from openai import OpenAI
 
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = ""
 BASE_URL = "https://openrouter.ai/api/v1"
 # You can use the free model or other Kimi models available on OpenRouter
 # KIMI_MODEL = "moonshotai/kimi-k2"

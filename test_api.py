@@ -2,11 +2,8 @@ import os
 import google.generativeai as genai
 
 # ✅ Fix: Set API Key Correctly
-# API_KEY = "AIzaSyAc5UHUJOkeCo67Kcv6OvYeduFkV-OgQrQ"  # Replace with your actual API Key
-# API_KEY = "AIzaSyCV-_HYQG9i1n_nqPyBTAimNhiCbd0y7Uk" # working
-API_KEY = "AIzaSyC1xocoL8eurJRMwMOu44v-vXg3uwCBs0s" # working
+API_KEY = "" # working
 os.environ["GEMINI_API_KEY"] = API_KEY
-# AIzaSyAJiD4iD9TcLeFfRwDILNn_TC6B59kcgYE
 # ✅ Fix: Pass API Key Correctly
 genai.configure(api_key=API_KEY)
 

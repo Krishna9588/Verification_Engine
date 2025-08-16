@@ -1,0 +1,100 @@
+[
+  {
+    "Name": "Birlasoft",
+    "company": {
+      "Date": "© 2025",
+      "Technology": "AWS",
+      "Usage": true,
+      "Relationship": "AWS-Powered Cloud Solutions",
+      "context": "Let’s Transform Your Enterprise with AWS-Powered Cloud Solutions",
+      "explanation": "The text mentions 'AWS-Powered Cloud Solutions', indicating that Birlasoft uses AWS to provide cloud solutions."
+    }
+  },
+  {
+    "company": {
+      "Date": null,
+      "Technology": null,
+      "Usage": null,
+      "Relationship": null,
+      "context": null,
+      "explanation": "# PDf File"
+    }
+  },
+  {
+    "Name": "Bristol-Myers Squibb Company",
+    "company": {
+      "Date": "© 2025 Bristol-Myers Squibb Company",
+      "Technology": null,
+      "Usage": false,
+      "Relationship": null,
+      "context": null,
+      "explanation": "# Page Error: 404 - Not Content found"
+    }
+  },
+  {
+    "Name": "British American Tobacco",
+    "company": {
+      "Date": "15 Aug 2025",
+      "Technology": "Alliance for Water Stewardship (AWS)",
+      "Usage": true,
+      "Relationship": "certified",
+      "context": "In 2024, an additional eight sites in our direct operations were successfully AWS certified, bringing the total number of certified sites to 51 or 91% of our operations sites.",
+      "explanation": "The text explicitly states that additional sites were 'AWS certified', indicating a formal certification and thus usage of AWS standards."
+    }
+  },
+  {
+    "Name": "ByteBridge",
+    "company": {
+      "Date": "August 27, 2024",
+      "Technology": "AWS",
+      "Usage": true,
+      "Relationship": "certifications",
+      "context": "Sandesh is a Solutions Architect at ByteBridge with a strong background in security and networking. He specializes in Secure Access Service Edge (SASE) projects and holds certifications in CCNA, AWS, ZScaler, and Netskope.",
+      "explanation": "The context mentions that Sandesh Reddy, a Solutions Architect at ByteBridge, holds certifications in AWS. This indicates that ByteBridge utilizes AWS, as certifications are typically pursued for technologies that are actively used or supported by the company."
+    }
+  },
+  {
+    "Name": "CAPCOM",
+    "company": {
+      "Date": "©CAPCOM",
+      "Technology": "AWS",
+      "Usage": true,
+      "Relationship": "AWSの各リージョンのサーバーからファイルをダウンロードした際の速度を測定できます",
+      "context": "「AWS Global Accelerator Speed Comparison」により、AWSの各リージョンのサーバーからファイルをダウンロードした際の速度を測定できます。",
+      "explanation": "The context mentions 'AWS Global Accelerator Speed Comparison' which is used to measure the speed of downloading files from AWS servers. This indicates that CAPCOM uses AWS for file downloads, therefore Usage is True."
+    }
+  },
+  {
+    "Name": "Capsule Technologies, Inc.",
+    "company": {
+      "Date": "© 2025",
+      "Technology": "AWS S3",
+      "Usage": true,
+      "Relationship": "Multi Cloud Integration allows scheduling of export jobs as a predefined frequency and can integrate with a facility owned and managed cloud storage account such as Google Cloud Storage, AWS S3 or Azure Blob storage.",
+      "context": "Multi Cloud Integration allows scheduling of export jobs as a predefined frequency and can integrate with a facility owned and managed cloud storage account such as Google Cloud Storage, AWS S3 or Azure Blob storage.",
+      "explanation": "The context mentions that the company's Multi Cloud Integration allows integration with AWS S3, indicating usage of the technology."
+    }
+  },
+  {
+    "Name": "CBN",
+    "company": {
+      "Date": "© 2024",
+      "Technology": "EU-US Privacy Shield",
+      "Usage": true,
+      "Relationship": "certification",
+      "context": "We use third party services, WP Engine, Pantheon, and Amazon Web Services to host our website and store much of the personal information that this site collects. These services have an EU-US Privacy Shield certification.",
+      "explanation": "Usage is true because CBN uses third-party services (WP Engine, Pantheon, and Amazon Web Services) that have EU-US Privacy Shield certification to host their website and store personal information."
+    }
+  },
+  {
+    "Name": "Lumen",
+    "company": {
+      "Date": "© 2025",
+      "Technology": "AWS",
+      "Usage": true,
+      "Relationship": "Partner",
+      "context": "AWS and Lumen provide a cloud services and management portfolio with flexible and secure access to the cloud.",
+      "explanation": "Lumen is using AWS cloud services to provide cloud services and management portfolio, as stated in the context."
+    }
+  }
+]
